@@ -1,5 +1,4 @@
 # Lab 09A: Shape Up Or Shape Out (LESS / Typescript)
-## [Demo Link](https://smithbrandon.github.io/Covalence-Lab-09A/)
 
 ## Due: Monday, June 12th
 ##### Covalence
