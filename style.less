@@ -1,0 +1,64 @@
+.roundedCorners(@radius: 100%){
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+
+}
+button{
+    float: right;
+}
+.circle{
+    .roundedCorners();
+    background-color: purple;
+}
+.control{
+    display: block;
+    margin: 15px;
+}
+h3{
+    padding-left: 10px;
+}
+input{
+    margin-left: 10px;
+    width: 70px;
+}
+label{
+    display: inline-block;
+    width: 90px;
+}
+#leftBar{
+    width: 40%;
+    height: 600px;
+    border: 1px solid black;
+    display: inline-block;
+    background-color: #D0D0D0;
+}
+#pad{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    float: left;
+    background-color: #37474F;
+}
+.pg-wrapper{
+    display: block;
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.shape{
+    position: absolute;
+}
+span{
+    float: right;
+    margin-right: 25px;
+}
+.triangle{
+	width: 0;
+	height: 0;
+	border-bottom-style: solid;
+    border-bottom-color: yellow;
+	border-right-style: solid;
+    border-right-color: transparent;
+}
