@@ -6,8 +6,11 @@ class Shape {
     name: string;
 
     constructor(width: number, height: number){
+        this.width = width;
+        this.height = height;
         this.name = "shape";
         this.radius = this.height /2;
+        this.div = document.createElement('div');
         this.div.style.backgroundColor = 'white';
         this.div.className = 'shape';
         this.div.style.width = width + 'px';
@@ -24,7 +27,7 @@ class Shape {
     }
     describe():void{
         document.getElementById('name').innerHTML = this.name;
-        document.getElementById('wid').innerHTML = String(this.width);
+        document.getElementById('wid').innerText = String(this.width);
         document.getElementById('hei').innerHTML = String(this.height);
         document.getElementById('rad').innerHTML = String(this.radius);
         document.getElementById('area').innerHTML = String(this.area());
@@ -66,10 +69,10 @@ class Circle extends Shape{
         this.radius = radius;
     }
     area():number{
-       return Math.PI * Math.pow(this.height / 2, 2);
+       return Math.PI * Math.pow(this.radius, 2);
     }
     perimeter():number{
-    return 2 * Math.PI * (this.height / 2);
+    return 2 * Math.PI * (this.radius);
     }
 }
 class Triangle extends Shape{
@@ -103,7 +106,7 @@ document.getElementById('sq').addEventListener('click', function () {
     new Square(hei);
 })
 document.getElementById('cir').addEventListener('click', function () {
-    let rad = (Number((<HTMLInputElement>document.getElementById('circle')).value)/2);
+    let rad = Number((<HTMLInputElement>document.getElementById('circle')).value);
     new Circle(rad);
 })
 document.getElementById('tri').addEventListener('click', function () {
